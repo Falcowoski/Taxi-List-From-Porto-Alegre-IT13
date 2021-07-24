@@ -1,6 +1,6 @@
-// Módulo Prompt
+// Prompt Module
 const prompt = require("./node_modules/prompt-sync")()
 
-// Módulo CSV
+// Data Module
 const data = require("./data.js").arr
 
