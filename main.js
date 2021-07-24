@@ -39,7 +39,7 @@ function haversine() {
 // Menu Functions
 function message(msg, timems) {
     var time = timems == undefined ? 2000 : timems
-    console.log("\nMessage:", msg)
+    console.log("\nSistema:", msg)
     sleep(time)
 }
 
@@ -52,7 +52,7 @@ function sleep(ms) {
 }
 
 function wait() {
-    var p = prompt("Pressione Enter para retornar...")
+    let p = prompt("Pressione Enter para retornar...")
 }
 
 //Menu 
