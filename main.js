@@ -7,17 +7,57 @@ const prompt = require('./node_modules/prompt-sync')()
 const data = require('./data.js').arr
 
 // Taxi Points List
-function list(array) {
-    for (let index = 0; index <= 9; index++) {
-        let nome = array[index]['nome']
-        let log = array[index]['logradouro']
-        let number = array[index]['number']
-        let tel = array[index]['tel']
-        let code = array[index]['code']
+var indexAux = 0
 
-        console.log(`============ PONTO ${index + 1} ============`)
-        console.log(`NOME DO PONTO: ${nome} \nENDEREÇO: ${[log]} \nNÚMERO: ${number} \nTELEFONE: ${tel} \nCÓDIGO: ${code}`)
+function list(array, start, end) { // data, 0, 9
+
+    for (let index = start; index <= end; index++) {
+        if (array[index] == null) {
+            end = 0
+            message("Ops! não há mais pontos disponíveis!")
+        } else {
+            indexAux = index
+            let nome = array[index]['nome']
+            let log = array[index]['logradouro']
+            let number = array[index]['number']
+            let tel = array[index]['telefone']
+            let code = array[index]['code']
+    
+            console.log(`============ PONTO ${index + 1} ============`)
+            console.log(`NOME DO PONTO: ${nome} \nENDEREÇO: ${[log]} \nNÚMERO: ${number} \nTELEFONE: ${tel} \nCÓDIGO: ${code}\n`)
+        }
     }
+
+    let avaliablePoints = (array.length - 1) - indexAux
+
+    if (avaliablePoints >= 1) { 
+        console.log(`Ainda há ${avaliablePoints} pontos disponíveis. O quê você deseja fazer?\n`)
+        console.log("1 - Pular 1 página\n2 - Pular 5 páginas\n3 - Pular 10 páginas\n4 - Sair\n")
+    
+        let option = Number(prompt("Opção: "))
+    
+        switch (option) {
+            case 1:
+                //console.log("indexAux:", indexAux) // 1st expect output: 9
+                list(data, indexAux + 1, indexAux + 10)
+                break;
+            case 2:
+                //console.log("indexAux:", indexAux) // 
+                list(data, indexAux + 1, indexAux + 50)
+                break;
+            case 3:
+                //console.log("indexAux:", indexAux) //
+                list(data, indexAux + 1, indexAux + 100)
+                break;
+            case 4:
+                message("Retornando ao menu principal...", 1000)
+                break;
+            default:
+                message("Ops! Não foi possível entender o seu pedido. Tente novamente!", 1000) 
+                break;
+        }
+    } else wait()
+
 }
 
 // Haversine Formula
@@ -73,10 +113,19 @@ do {
             long = -51.22332745
             break
         case 1:
-            message("Hi!")
+            list(data, 0, 9)
             break
         case 2:
-        
+            console.log("Exemplo: -5.002544875")
+            lat = Number(prompt("Digite sua latitude em formato geodésico decimal: "))
+            long = Number(prompt("Digite sua longitutde em formato geodésico decimal: "))
+            if (isNaN(lat && long) != true ) {
+                message("Localização armazenada com sucesso!", 800)
+            } else {
+                message("Ops! Valor inválido. Tente novamente!")
+                lat = undefined
+                long = undefined
+            }
             break    
         case 3:
             
@@ -88,7 +137,7 @@ do {
             console.clear()
             break
         default:
-            message('Ops! não foi possível entender o seu pedido. Tente novamente!')
+            message('Ops! Não foi possível entender o seu pedido. Tente novamente!')
     }
 
 } while (option != 9)
