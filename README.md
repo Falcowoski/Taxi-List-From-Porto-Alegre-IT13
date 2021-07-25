@@ -3,7 +3,14 @@
 Um software simples que lista e localiza pontos de taxi próximos do usuário em Porto Alegre - Rio Grande do Sul.
 É desenvolvido em `JavaScript` e executável por meio do `Node.js`
 
-Requisito: [`Node.js`](https://nodejs.org/en/)
+# REQUISITOS
+## 1. Ambiente de Execução: [`Node.js`](https://nodejs.org/en/)
+## 2. Módulo: [`Prompt-Sync`](https://www.npmjs.com/package/prompt-sync)
+
+Para instalar o módulo automáticamente, entre na pasta raiz do diretório e insira o comando abaixo no CMD.
+```sh
+npm install
+```
 
 # FUNÇÕES
 

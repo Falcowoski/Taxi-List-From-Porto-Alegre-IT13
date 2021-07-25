@@ -1,7 +1,7 @@
 // Leonardo de Camargo Falcoski | Leonardo.Falcoski@gmail.com | Dell IT 2021
 
 // Prompt Module
-const prompt = require('./node_modules/prompt-sync')()
+const prompt = require('prompt-sync')()
 
 // Data Module
 const data = require('./data.js').arr
