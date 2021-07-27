@@ -5,9 +5,9 @@ Um software simples que lista e localiza pontos de taxi próximos do usuário em
 
 # REQUISITOS
 ## 1. Ambiente de Execução: [`Node.js`](https://nodejs.org/en/)
-## 2. Módulo: [`Prompt-Sync`](https://www.npmjs.com/package/prompt-sync)
+## 2. Módulos: [`Prompt-Sync`](https://www.npmjs.com/package/prompt-sync), [`Colors`](https://www.npmjs.com/package/colors)
 
-Para instalar o módulo automáticamente, entre na pasta raiz do diretório e insira o comando abaixo no CMD.
+Para instalar os módulos automáticamente, entre na pasta raiz do diretório e insira o comando abaixo no CMD.
 ```sh
 npm install
 ```
