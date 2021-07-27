@@ -21,7 +21,7 @@ npm install
 ## 2. Informar minha localização &#9745;
 > A localização do usuário é inserida manualmente em formato *geodésico decimal*.
 
-## 3. Encontrar pontos próximos &#9744;
+## 3. Encontrar pontos próximos &#9745;
 > Por meio da localização inserida na função anterior, o sistema calcula e entrega os três pontos de taxi mais próximos do do usuário, junto com a distância estimada *(Fórmula de Haversine)* até eles.
 
 ## 4. Buscar pontos por logradouro &#9744;
