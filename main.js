@@ -26,7 +26,7 @@ function list(array, start, end, distanceArraySorted) {
             let code = array[index]['code']
     
             console.log(`============ PONTO ${index + 1} ==================================`.bold .bgGreen)
-            console.log(`NOME DO PONTO: ${nome} \nENDEREÇO: ${[log]} \nNÚMERO: ${number} \nTELEFONE: ${tel} \nCÓDIGO: ${code}`)
+            console.log(`NOME DO PONTO: ${nome} \nENDEREÇO: ${[log]} \nNÚMERO: ${number} \nTELEFONE: ${tel}`)
 
             if (distanceArraySorted == undefined) {
                 console.log(`CÓDIGO: ${code}\n`)
