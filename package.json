@@ -1,0 +1,24 @@
+{
+  "name": "taxi-list-from-porto-alegre-it-13",
+  "version": "1.0.0",
+  "description": "Um software simples que lista e localiza pontos de taxi próximos do usuário em Porto Alegre - Rio Grande do Sul.\r É desenvolvido em `JavaScript` e executável por meio do `Node.js`",
+  "main": "main.js",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falcowoski/TaxiListFromPortoAlegreIT13.git"
+  },
+  "author": "Leonardo Falcoski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Falcowoski/TaxiListFromPortoAlegreIT13/issues"
+  },
+  "homepage": "https://github.com/Falcowoski/TaxiListFromPortoAlegreIT13#readme"
+}
