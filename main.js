@@ -161,7 +161,7 @@ do {
 
     switch(option) {
         case 0: // test mode
-            lat = -30.04380072
+            lat = -30.04389972
             long = -51.22332745
             console.log(`\n=========== ${"Coordenadas definidas!".white}`.green, "==============\n".green)
             console.log("Latitude:", lat, "| Longitude:", long)
