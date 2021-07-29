@@ -15,7 +15,7 @@ var indexAux = 0
 function list(array, start, end, distanceArraySorted) {
     for (let index = start; index <= end; index++) {
         if (array[index] == null) {
-            end = 0
+            end = 0 // this will stop the for loop
             message("Ops! não há mais pontos disponíveis!")
         } else {
             indexAux = index
@@ -204,7 +204,15 @@ do {
             } else message("Ops! A localização do usuário é desconhecida")
             break
         case 4:
-            
+            console.log("Aviso: Não utilize caracteres especiais!".italic .green)
+            let log = prompt("Digite o logradouro: ", "noResponse")
+            if (log != "noResponse") { 
+                let logSearch = data.filter(array => array.logradouro.includes(log.toUpperCase()))
+                if (logSearch.length != 0) {
+                    console.log("\nOs seguintes pontos foram encontrados:\n".bold .green)
+                    list(logSearch, 0, 9)
+                } else message("Ops! Não foi possível encontrar nenhum ponto. Tente novamente!")
+            } else message("Ops! Nenhum logradouro foi especificado. Tente novamente!")
             break
         case 9:
             console.clear()
