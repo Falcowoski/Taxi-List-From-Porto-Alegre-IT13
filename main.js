@@ -111,20 +111,18 @@ function haversine() {
 
 // Calculate distance (Origin -> Taxi Points) with Haversine Formula
 function calculeDistanceArray(array, latitude, longitude) {
-
-        let distanceArray = []
-        let distanceArraySorted = []
-        
-        for(let index = 0; index < array.length; index++) {
-            let latI = Number( (array[index]["latitude"]) )
-            let longI = Number( (array[index]["longitude"]) )
-            let hav = haversine(lat, long, latI, longI)
-            distanceArray.push(hav) 
-        }
-        return {
-            distanceArray: distanceArray,
-            distanceArraySorted: distanceArraySorted = distanceArray.slice().sort((a, b) => a - b)
-        }
+    let distanceArray = []
+    let distanceArraySorted = []
+    for(let index = 0; index < array.length; index++) {
+        let latI = Number( (array[index]["latitude"]) )
+        let longI = Number( (array[index]["longitude"]) )
+        let hav = haversine(lat, long, latI, longI)
+        distanceArray.push(hav) 
+    }
+    return {
+        distanceArray: distanceArray,
+        distanceArraySorted: distanceArraySorted = distanceArray.slice().sort((a, b) => a - b)
+    }
 }
 
 
