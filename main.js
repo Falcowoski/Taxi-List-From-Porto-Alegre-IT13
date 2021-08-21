@@ -66,7 +66,7 @@ function list(array, start, end, distanceArraySorted) {
                 message("Retornando ao menu principal...", 500)
                 break;
             default:
-                message("Ops! Não foi possível entender o seu pedido. Tente novamente!", 1000) 
+                message("Ops! Não foi possível entender o seu pedido. Tente novamente!", 3500) 
                 break;
         }
     } else wait()
